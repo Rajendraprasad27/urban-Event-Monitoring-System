@@ -1,0 +1,37 @@
+# Virtual Environments
+.venv/
+.venv*/
+venv/
+backend/venv/
+backend/.venv/
+
+# Node.js / React Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Python Cache and Logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.err
+
+# Environment configuration files (contains secrets/API keys)
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Machine Learning models and large binary files
+ml_models/bert-event-classifier/checkpoint-*/
+ml_models/bert-event-classifier/model.safetensors
+ml_models/bert-event-classifier/training_args.bin
+
+# Datasets and raw files
+datasets/raw/
+datasets/processed/
+raw/

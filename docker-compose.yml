@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: citymind_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=adminpassword
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+    container_name: citymind_backend
+    environment:
+      - MONGODB_URL=mongodb://admin:adminpassword@mongodb:27017
+      - MONGODB_DATABASE=citymind
+      - JWT_SECRET=replace-this-secret
+      - ENABLE_AI_MODELS=false
+      - CORS_ORIGINS=http://localhost:5173,http://localhost:3000,http://localhost
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: citymind_frontend
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:

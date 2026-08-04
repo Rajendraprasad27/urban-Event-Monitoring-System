@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Heavy traffic jam on Outer Ring Road near Marathahalli after a stalled bus.",
+    "category": "Traffic",
+    "location": "Marathahalli"
+  },
+  {
+    "text": "Waterlogging reported at Silk Board junction, vehicles moving slowly.",
+    "category": "Flood",
+    "location": "Silk Board"
+  },
+  {
+    "text": "Accident reported near Hebbal flyover, ambulance on site and traffic backed up.",
+    "category": "Accident",
+    "location": "Hebbal"
+  },
+  {
+    "text": "Large public gathering near MG Road metro, police managing crowd.",
+    "category": "Public Gathering",
+    "location": "MG Road"
+  },
+  {
+    "text": "Emergency services responding to fire alert in Whitefield tech park.",
+    "category": "Emergency",
+    "location": "Whitefield"
+  }
+]

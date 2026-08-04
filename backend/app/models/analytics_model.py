@@ -1,0 +1,1 @@
+ANALYTICS_COLLECTION = "analytics"

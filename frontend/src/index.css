@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-dark: #0a0a0c;
+  --color-cyber-panel: #13141a;
+  --color-cyber-border: #22232e;
+  --color-cyber-accent: #b05cff;
+  --color-cyber-neon: #00ffcc;
+  --color-cyber-text: #a1a1aa;
+  --color-cyber-heading: #f8fafc;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-cyber-dark text-cyber-text antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    scrollbar-color: #34364a #0a0a0c;
+  }
+}
+
+.glass-panel {
+  @apply rounded-lg border border-cyber-border bg-cyber-panel/80 backdrop-blur-md;
+}
+
+.leaflet-container {
+  background: #0a0a0c;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #13141a;
+  color: #f8fafc;
+  border: 1px solid #22232e;
+}
