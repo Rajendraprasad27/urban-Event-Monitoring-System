@@ -83,3 +83,26 @@ The trained DistilBERT model is saved in `ml_models/bert-event-classifier`. More
 - `GET /api/analytics/`
 - `GET /api/analytics/trends`
 - `WS /ws/events`
+
+## 📦 How to Upload This Project to GitHub
+
+This repository has already been initialized locally with a clean history and a comprehensive `.gitignore` that prevents large files (e.g. model weights) and secrets from being committed.
+
+To upload this project to GitHub, follow these simple steps:
+
+1. **Create a new repository on GitHub**:
+   - Go to [GitHub](https://github.com/) and click **New Repository**.
+   - Name the repository (e.g., `urban-event-monitoring-system`).
+   - Do **not** check "Add a README" or "Add .gitignore" or "Choose a license" (as they are already configured locally).
+   - Click **Create repository**.
+
+2. **Link and Push your repository**:
+   - Copy the commands below, replace `<YOUR_USERNAME>` with your GitHub username, and run them in your terminal at `d:\Urban-Event-Monitoring-System`:
+     ```bash
+     # Link this local repository to GitHub
+     git remote add origin https://github.com/<YOUR_USERNAME>/urban-event-monitoring-system.git
+
+     # Push to GitHub
+     git push -u origin main
+     ```
+
